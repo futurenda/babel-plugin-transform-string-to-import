@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transform-string-to-import doesn't generate duplicate imports: doesn't generate duplicate imports 1`] = `
+"
+var a = '~iconName'
+var b = '~iconName'
+function foo() {
+    return <icon name=\\"~iconName\\"/>
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _iconName from 'iconName';
+var a = _iconName;
+var b = _iconName;
+function foo() {
+    return <icon name={_iconName} />;
+}
+"
+`;
+
+exports[`transform-string-to-import transforms string expression: transforms string expression 1`] = `
+"
+var a = '~iconName'
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _iconName from 'iconName';
+var a = _iconName;
+"
+`;
+
+exports[`transform-string-to-import transforms string in function: transforms string in function 1`] = `
+"
+function foo() {
+    var a = '~iconName'
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _iconName from 'iconName';
+function foo() {
+    var a = _iconName;
+}
+"
+`;
+
+exports[`transform-string-to-import transforms string in jsx: transforms string in jsx 1`] = `
+"
+function foo() {
+    return <icon name=\\"~iconName\\"/>
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _iconName from \\"iconName\\";
+function foo() {
+    return <icon name={_iconName} />;
+}
+"
+`;
+
+exports[`transform-string-to-import works with expressions: works with expressions 1`] = `
+"
+function foo() {
+    return <icon name={'~iconName'}/>
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _iconName from 'iconName';
+function foo() {
+    return <icon name={_iconName} />;
+}
+"
+`;

@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-transform-string-to-import",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "update-snapshot": "jest -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futurenda/babel-plugin-transform-string-to-import.git"
+  },
+  "author": "fnlCtrl",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-tester": "^5.0.0",
+    "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "babel-plugin-syntax-jsx": "^6.18.0"
+  }
+}

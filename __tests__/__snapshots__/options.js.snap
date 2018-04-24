@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transform-string-to-import works with custom prefix: works with custom prefix 1`] = `
+"
+var a = '!iconName'
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _iconName from 'iconName';
+var a = _iconName;
+"
+`;

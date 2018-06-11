@@ -3,6 +3,10 @@
 Transform prefixed strings into imports.
 Works with babel 6/7.
 
+## Why
+To allow `.jsx` to have the equivalent of `vue-loader`'s`transformAssetUrls`,
+so we can use `<Icon name="~image.jpg"/>` in jsx too, as the same in `.vue`.
+
 ### in
 ```js
 var a = '~iconName'
